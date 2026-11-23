@@ -1,0 +1,91 @@
+{
+  "type": "record",
+  "name": "TerminalLoading",
+  "namespace": "pertamina.supply",
+  "doc": "Pemuatan mobil tangki di gantry terminal BBM, satu record per DO",
+  "fields": [
+    {
+      "name": "do_number",
+      "doc": "Nomor delivery order, berurutan",
+      "type": {
+        "type": "long",
+        "arg.properties": {
+          "iteration": {
+            "start": 1
+          }
+        }
+      }
+    },
+    {
+      "name": "terminal_id",
+      "doc": "ID terminal BBM (contoh)",
+      "type": {
+        "type": "string",
+        "arg.properties": {
+          "options": [
+            "TBBM-01",
+            "TBBM-02"
+          ]
+        }
+      }
+    },
+    {
+      "name": "truck_id",
+      "doc": "ID mobil tangki (contoh)",
+      "type": {
+        "type": "string",
+        "arg.properties": {
+          "options": [
+            "MT-0101",
+            "MT-0102",
+            "MT-0103",
+            "MT-0104",
+            "MT-0105",
+            "MT-0106"
+          ]
+        }
+      }
+    },
+    {
+      "name": "spbu_id",
+      "doc": "SPBU tujuan",
+      "type": {
+        "type": "string",
+        "arg.properties": {
+          "options": [
+            "SPBU-JKT-01",
+            "SPBU-JKT-02",
+            "SPBU-SMG-01",
+            "SPBU-SMG-02"
+          ]
+        }
+      }
+    },
+    {
+      "name": "product",
+      "doc": "Produk BBM",
+      "type": {
+        "type": "string",
+        "arg.properties": {
+          "options": [
+            "PERTALITE",
+            "PERTALITE",
+            "PERTAMAX"
+          ]
+        }
+      }
+    },
+    {
+      "name": "loaded_liters",
+      "doc": "Volume muat, liter",
+      "type": {
+        "type": "int",
+        "arg.properties": {
+          "options": [
+            8000
+          ]
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,70 @@
+{
+  "type": "record",
+  "name": "SpbuSale",
+  "namespace": "pertamina.supply",
+  "doc": "Lonjakan penjualan Pertalite di SPBU-JKT-01",
+  "fields": [
+    {
+      "name": "spbu_id",
+      "doc": "ID SPBU (contoh)",
+      "type": {
+        "type": "string",
+        "arg.properties": {
+          "options": [
+            "SPBU-JKT-01"
+          ]
+        }
+      }
+    },
+    {
+      "name": "product",
+      "doc": "Produk BBM",
+      "type": {
+        "type": "string",
+        "arg.properties": {
+          "options": [
+            "PERTALITE"
+          ]
+        }
+      }
+    },
+    {
+      "name": "nozzle",
+      "doc": "Nomor nozzle",
+      "type": {
+        "type": "int",
+        "arg.properties": {
+          "range": {
+            "min": 1,
+            "max": 9
+          }
+        }
+      }
+    },
+    {
+      "name": "liters",
+      "doc": "Volume transaksi, liter",
+      "type": {
+        "type": "int",
+        "arg.properties": {
+          "range": {
+            "min": 20,
+            "max": 61
+          }
+        }
+      }
+    },
+    {
+      "name": "scenario",
+      "doc": "Penanda connector, untuk demo",
+      "type": {
+        "type": "string",
+        "arg.properties": {
+          "options": [
+            "lonjakan"
+          ]
+        }
+      }
+    }
+  ]
+}
