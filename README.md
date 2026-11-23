@@ -1,7 +1,5 @@
 # Demo Rantai Pasok sampai SPBU di Confluent Cloud: Datagen + Flink
 
-Skenario 07 dari deck dan simulasi Pertamina Digital Hub. Semua langkah lewat Confluent Cloud Console.
-
 Empat connector Datagen mensimulasikan transaksi POS SPBU, pemuatan mobil tangki di gantry terminal, dan penerimaan BBM yang tercatat ATG. Flink menghitung tiga hal:
 1. **Rekonsiliasi per DO**: volume muat di terminal dibandingkan dengan volume diterima di SPBU.
 2. **Stok buku per tangki**: stok awal + penerimaan − penjualan, diperbarui setiap ada transaksi.
